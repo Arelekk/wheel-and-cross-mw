@@ -24,7 +24,7 @@ const getAnswers = () => {
     return answers
 }
 
-const checkWin = () => {
+const playerWin = () => {
     const answers = getAnswers();
     let winReturn = null;
     winCombinations.forEach(combination => {
@@ -41,7 +41,6 @@ const checkWin = () => {
         }
 
     })
-
     return winReturn
 }
 
@@ -50,7 +49,6 @@ const softReset = () => {
     tds.forEach(td => {
         td.textContent = ""
     });
-    turn = "O"
 }
 
 const drawStarter = () => {
@@ -70,7 +68,7 @@ const click = (event) => {
         } else {
             turn = "O"
         }
-        let winner = checkWin();
+        let winner = playerWin();
         if (winner == 2) {
             score.value += "X | ";
             softReset()
