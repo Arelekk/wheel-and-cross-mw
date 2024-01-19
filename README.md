@@ -1,5 +1,5 @@
 # wheel-and-cross-mw
-Gra w kółko i krzyrzyk.
+Gra w kółko i krzyżyk.
 
 
 OPIS SKRYPTU:
